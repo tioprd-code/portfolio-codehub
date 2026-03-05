@@ -1,0 +1,83 @@
+<section id="contact-form-section" class="form-container">
+    <div class="form-card">
+        <h3>Kirim Pesan</h3>
+        <p>Ada proyek menarik? Mari bicarakan.</p>
+        
+        <form action="https://formspree.io/f/your-id" method="POST">
+            <div class="input-group">
+                <label>Nama Lengkap</label>
+                <input type="text" name="name" placeholder="Masukkan nama Anda" required>
+            </div>
+            
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="email@contoh.com" required>
+            </div>
+            
+            <div class="input-group">
+                <label>Pesan</label>
+                <textarea name="message" rows="5" placeholder="Tuliskan pesan Anda di sini..." required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Kirim Sekarang</button>
+        </form>
+    </div>
+</section>
+
+<style>
+.form-container {
+    padding: 100px 20px;
+    background-color: #051139; /* Menyesuaikan background biru gelap gambar */
+    display: flex;
+    justify-content: center;
+}
+
+.form-card {
+    background: rgba(255, 255, 255, 0.05); /* Efek transparan */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 500px;
+    color: white;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #cbd5e1;
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    color: white;
+    outline: none;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #3b82f6;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #2563eb;
+}
+</style>
