@@ -657,3 +657,50 @@ footer p { color: rgba(255,255,255,0.35); font-size: 0.82rem; }
   .design-grid { grid-template-columns: 1fr 1fr; }
   .contact-big { font-size: 3.5rem; }
 }
+/* Untuk layar dengan lebar maksimal 768px (HP & Tablet) */
+@media screen and (max-width: 768px) {
+    
+    /* Mengatur kontainer kartu agar menumpuk ke bawah */
+    .contact-container { 
+        display: flex;
+        flex-direction: column; /* Ubah dari row ke column */
+        gap: 20px; /* Beri jarak antar kartu */
+        padding: 20px;
+    }
+
+    /* Mengatur lebar kartu agar penuh sesuai layar HP */
+    .contact-card {
+        width: 100% !important; 
+        box-sizing: border-box;
+        margin-bottom: 15px;
+    }
+
+    /* Menyesuaikan ukuran teks agar tidak terlalu besar di HP */
+    .contact-card-value {
+        font-size: 14px; 
+        word-wrap: break-word; /* Mencegah alamat email panjang terpotong */
+    }
+
+    /* Opsional: Menyesuaikan judul utama */
+    h1.get-in-touch {
+        font-size: 40px; /* Ukuran teks "GET IN TOUCH" di HP */
+        text-align: center;
+    }
+}
+/* Jika layar di bawah 1024px ATAU perangkat tidak mendukung hover (HP) */
+@media screen and (max-width: 1024px), (hover: none) {
+  #cursor, 
+  #cursorRing, 
+  .cursor, 
+  .cursor-ring {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important; /* Agar tidak menghalangi klik tombol */
+  }
+
+  /* Kembalikan kursor standar sistem agar link bisa diklik dengan nyaman */
+  body, a, button {
+    cursor: auto !important;
+  }
+}
